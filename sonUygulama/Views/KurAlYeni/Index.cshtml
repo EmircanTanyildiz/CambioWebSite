@@ -1,0 +1,27 @@
+﻿@using sonUygulama.Models
+@model List<TBLKITAP>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Kur Al</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Kur Türü</th>
+        <th>Kur Miktarı</th>
+        <th>Sat</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.ID</td>
+            <td>@k.AD</td>
+            <td>@k.BASIMYILI</td>
+            <td><a href="/KurAlYeni/KurSil/@k.ID" class="btn btn-danger">Sat</a></td>
+        </tr>
+    }
+</table>
+<a href="/KurAlYeni/KurEkle/" class="btn btn-primary">Kur Ekle</a>

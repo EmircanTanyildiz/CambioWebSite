@@ -1,0 +1,24 @@
+﻿@using sonUygulama.Models
+@model List<TBLKITAP>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Kur İşlemleri</h2>
+
+<table class="table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Kur Türü</th>
+        <th>Döviz Miktarı</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.ID</td>
+            <td>@k.AD</td>
+            <td>@k.BASIMYILI</td>
+        </tr>
+    }
+</table>

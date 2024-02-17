@@ -1,0 +1,23 @@
+﻿@model sonUygulama.Models.TBLKITAP
+@{
+    ViewBag.Title = "KurEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>KurEkle</h2>
+
+<form class="form-group" method="post">
+    <div></div>
+    <div style="margin-top:15px">
+        <label>Kur Adı</label>
+        @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Kur Miktarı</label>
+        @Html.TextBoxFor(y => y.BASIMYILI, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+
+        <button class="btn btn-info">Kur Al</button>
+    </div>
+</form>
